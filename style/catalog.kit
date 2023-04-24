@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>шаблон</title>
+    <link rel="stylesheet" href="style/css/style.css">
+    <style>
+        li {
+            list-style-type: none;
+        }
+
+        /* Убираем исходную нумерацию у списка */
+        ol {
+            counter-reset: list1;
+        }
+
+        /* Инициируем счетчик */
+        ol li:before {
+            counter-increment: list1;
+            /* Увеличиваем значение счетчика */
+            content: counter(list1) ". ";
+            /* Выводим число */
+        }
+
+        ol ol {
+            counter-reset: list2;
+        }
+
+        /* Инициируем счетчик вложенного списка */
+        ol ol li:before {
+            counter-increment: list2;
+            /* Увеличиваем значение счетчика вложенного списка */
+            content: counter(list1) "." counter(list2) ". ";
+            /* Выводим число */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- @import header.html -->
+        <div class="content indent">
+            <ol>
+                <li>Пункт
+                    <ol>
+                        <li>Подпункт</li>
+                        <li>Подпункт</li>
+                        <li>Подпункт</li>
+                    </ol>
+                </li>
+                <li>Пункт
+                    <ol>
+                        <li>Подпункт</li>
+                        <li>Подпункт</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+        <!-- @import footer.html -->
+    </div>
+
+    <!--    общие скрипты -->
+    <script src="./js/app.js"></script>
+
+    <!--    формирование каталога   -->
+    <script src="./js/catalog.js"></script>
+
+    <!--    массив с товаром  -->
+    <script src="./js/products.js"></script>
+
+    <!--    добавление карточки товара в HTML -->
+    <script src="./js/productCards.js"></script>
+
+
+</body>
+
+</html>

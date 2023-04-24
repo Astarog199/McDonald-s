@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>шаблон</title>
+    <link rel="stylesheet" href="style/css/style.css">
+    <style>
+        li {
+            list-style-type: none;
+        }
+
+        /* Убираем исходную нумерацию у списка */
+        ol {
+            counter-reset: list1;
+        }
+
+        /* Инициируем счетчик */
+        ol li:before {
+            counter-increment: list1;
+            /* Увеличиваем значение счетчика */
+            content: counter(list1) ". ";
+            /* Выводим число */
+        }
+
+        ol ol {
+            counter-reset: list2;
+        }
+
+        /* Инициируем счетчик вложенного списка */
+        ol ol li:before {
+            counter-increment: list2;
+            /* Увеличиваем значение счетчика вложенного списка */
+            content: counter(list1) "." counter(list2) ". ";
+            /* Выводим число */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+<header class="header ">
+    <div class="wrapped indent">
+        <a class="logo" href="index.html">f.palace</a>
+
+        <div class="rightHeader">
+            <img class="bars" src="style/pictures/bars.png" alt="bars">
+            <img class="cabinet_btn" src="style/pictures/user.png" alt="user">
+            <span class="cartIconWrap">
+                <img class="cartIcon" src="style/pictures/cart.png" alt="cart">
+                <span>0</span>
+            </span>
+
+
+            <div class="basket hidden">
+                <div class="basketRow basketHeader">
+                    <div>Название товара</div>
+                    <div>Количество</div>
+                    <div>Цена за шт.</div>
+                    <div>Итого</div>
+                </div>
+
+                <div class="basketTotal">
+                    Товаров в корзине на сумму:
+                    $<span class="basketTotalValue">0</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+</header>        <div class="content indent">
+            <ol>
+                <li>Пункт
+                    <ol>
+                        <li>Подпункт</li>
+                        <li>Подпункт</li>
+                        <li>Подпункт</li>
+                    </ol>
+                </li>
+                <li>Пункт
+                    <ol>
+                        <li>Подпункт</li>
+                        <li>Подпункт</li>
+                    </ol>
+                </li>
+            </ol>
+        </div>
+
+<footer class="footer">
+    <div class="wrapped_footer indent">
+        <!-- шаблон для будущей реализации чата -->
+        <button class="but_message">Показать сообщение</button>
+        <div style="display: none;" class="message">Текст сообщения</div>
+        <!--  -->
+        <p>footer</p>
+    </div>
+</footer>    </div>
+
+    <!--    общие скрипты -->
+    <script src="./js/app.js"></script>
+
+    <!--    формирование каталога   -->
+    <script src="./js/catalog.js"></script>
+
+    <!--    массив с товаром  -->
+    <script src="./js/products.js"></script>
+
+    <!--    добавление карточки товара в HTML -->
+    <script src="./js/productCards.js"></script>
+
+
+</body>
+
+</html>

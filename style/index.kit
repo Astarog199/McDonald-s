@@ -16,6 +16,8 @@
 <body>
     <div class="container">
         <!-- @import header.html -->
+        <!-- @import product_item.html -->
+        
         <div class="content indent">
             <div class="banner"></div>
 
@@ -23,46 +25,39 @@
 
                 <div class="wrapped_products">
                     <h6> Каталог</h6>
-
-                    <div class="Filter">
-                        <!-- @import slider.html -->
-                        <!-- Фильтр товаров -->
-                        <div class="filterProducts">
-                            <div class="sortPrice">
-                                <p>сортировка по цене:</p> <br>
-                                <input id="from" type="text" placeholder="от">
-                                <input id="to" type="text" placeholder="до">
-                            </div>
-                        </div>
-                    </div>
-
                     <div class="products_catalog">
                         <!-- Каталог товаров -->
                     </div>
-
                 </div>
             </div>
         </div>
         <!-- @import footer.html -->
     </div>
 
+<!-- объекты товаров -->
+    <!--    hamburger -->
+    <script src="./js/class/hamburger.js"></script>
+
+    <!--    cheeseburger -->
+    <script src="./js/class/cheeseburger.js"></script>
+
+    <!--    Big_Mac -->
+    <script src="./js/class//Big_Mac.js"></script>
+
+
+
     <!--    общие скрипты -->
     <script src="./js/app.js"></script>
 
     <!--    формирование каталога   -->
-    <script src="./js/construct.js"></script>
-
-    <!--    массив с товаром  -->
-    <script src="./js/products.js"></script>
-
-    <!--    добавление карточки товара в HTML -->
-    <script src="./js/productCards.js"></script>
+    <script src="./js/productDTO.js"></script>
 
     <!-- корзина товаров -->
     <script src="./js/basket.js"></script>
 
-    <!-- сортировка по цене -->
-    <script src="./js/sortPrice.js"></script>
+    <!--    добавление карточки товара в HTML -->
+    <script src="./js/buttons.js"></script>
+
 
 </body>
 

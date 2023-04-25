@@ -1,4 +1,14 @@
 @charset "UTF-8";
+.display_none {
+  display: none;
+}
+
+.display_block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .wrapped_products {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -12,6 +22,7 @@
 .product_item_detailed_block {
   width: 500px;
   height: 770px;
+  display: none;
 }
 
 /* Каталог товаров */

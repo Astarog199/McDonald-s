@@ -44,7 +44,7 @@ class ProductItem {
     return `<div class="product-item" data-id="${this.id}">
               <img src="${this.img}" alt="Some img">
               <div class="desc">
-                  <h3>${this.title}</h3>
+                  <h3 class="title_product-item">${this.title}</h3>
                   <p>${this.price} \u20bd</p>
                   <button class="buy-btn">Купить</button>
               </div>

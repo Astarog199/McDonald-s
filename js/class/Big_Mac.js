@@ -1,9 +1,7 @@
 'use strict'
 
 class Big_Mac extends Hamburger {
-    constructor(size, stuffing, price, calories) {
-        this.topping = topping;
-        
+    constructor(size, stuffing, price, calories) {      
         super(size, stuffing, price, calories);
 
         this.getSize();

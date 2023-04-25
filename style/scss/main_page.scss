@@ -2,6 +2,14 @@ $color_orange: #FF9401;
 
 .content {}
 
+.display_none{
+    display: none;
+}
+
+.display_block{
+    display: flex;
+}
+
 .wrapped_products {
     display: flex;
 }
@@ -14,6 +22,7 @@ $color_orange: #FF9401;
 .product_item_detailed_block{
     width: 500px;
     height: 770px;
+    display: none;
 }
 
 

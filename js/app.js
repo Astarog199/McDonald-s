@@ -26,22 +26,5 @@ let cabinet_btn = document.querySelector('.cabinet_btn');
 cabinet_btn.addEventListener('click', clickCabinet);
 
 
-/**
- * функция отображает полученное сообщение и включает звуковой сигнал
- * @param {*} res добавление в переменную кнопку
- * @param {*} res2 добавление в переменную аудио файла
- * @param {*} res3 добавление в текста сообщения
- */
 
-let res = document.querySelector('.message');
-let res2 = new Audio('./tune/notification.mp3');
-let res3 = document.querySelector('.but_message');
-res3.addEventListener('click', btn)
-
-function btn(event) {
-
-    res2.play()
-    res.style.display = "block";
-
-}
 

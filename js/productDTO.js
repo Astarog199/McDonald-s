@@ -3,7 +3,7 @@ class ProductList {
   #goods;
   #allProducts;
 
-  constructor(container = '.products') {
+  constructor(container = '.products_catalog') {
     this.container = container;
     this.#goods = [];
     this.#allProducts = [];
@@ -14,9 +14,9 @@ class ProductList {
 
   #fetchGoods() {
     this.#goods = [
-      {id: 1, title: 'Hamburger', price: 20000},
-      {id: 2, title: 'Cheeseburger', price: 1500},
-      {id: 3, title: 'Big Mac', price: 5000},
+      { id: 1, title: 'Hamburger', price: 20000 },
+      { id: 2, title: 'Cheeseburger', price: 1500 },
+      { id: 3, title: 'Big Mac', price: 5000 },
     ];
   }
 

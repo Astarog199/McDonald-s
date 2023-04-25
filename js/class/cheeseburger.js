@@ -17,23 +17,38 @@ class Cheeseburger extends Hamburger {
 
         stuffing.forEach(element => {
 
-            if (true) {
-                this.price = this.price + 10;
+            if (element == ' кетчуп') {
+                this.price = this.price + 4,5;
+                this.calories = this.calories + 10;
+            }
+
+            if (element == ' горчица') {
+                this.price = this.price + 4,5;
                 this.calories = this.calories + 20;
             }
 
-            if (element == ' соусом') {
-                this.price = this.price + 5;
+            if (element == '  мясная котлета') {
+                this.price = this.price + 10;
                 this.calories = this.calories + 10;
             }
 
-            if (element == ' майонезом') {
-                this.price = this.price + 5;
-                this.calories = this.calories + 10;
+            if (element == ' сыр') {
+                this.price = this.price + 10;
+                this.calories = this.calories + 5;
             }
 
-            if (element == ' салатом') {
-                this.price = this.price + 20;
+            if (element == ' лук') {
+                this.price = this.price + 5;
+                this.calories = this.calories + 5;
+            }
+
+            if (element == ' огурец маринованный') {
+                this.price = this.price + 5;
+                this.calories = this.calories + 5;
+            }
+
+            if (element == ' соль') {
+                this.price = this.price + 1;
                 this.calories = this.calories + 5;
             }
         });
@@ -41,7 +56,43 @@ class Cheeseburger extends Hamburger {
     }
 
     removeTopping(topping) {
-        // Убрать добавку 
+        stuffing.forEach(element => {
+
+            if (element !== ' кетчуп') {
+                this.price = this.price - 4,5;
+                this.calories = this.calories - 10;
+            }
+
+            if (element !== ' горчица') {
+                this.price = this.price - 4,5;
+                this.calories = this.calories - 20;
+            }
+
+            if (element !== '  мясная котлета') {
+                this.price = this.price - 10;
+                this.calories = this.calories - 10;
+            }
+
+            if (element !== ' сыр') {
+                this.price = this.price - 10;
+                this.calories = this.calories - 5;
+            }
+
+            if (element !== ' лук') {
+                this.price = this.price - 5;
+                this.calories = this.calories - 5;
+            }
+
+            if (element !== ' огурец маринованный') {
+                this.price = this.price - 5;
+                this.calories = this.calories - 5;
+            }
+
+            if (element !== ' соль') {
+                this.price = this.price - 1;
+                this.calories = this.calories - 5;
+            }
+        });
     }
     getToppings(topping) {
         // Получить список добавок 
@@ -54,13 +105,13 @@ class Cheeseburger extends Hamburger {
         }
 
         if (this.size == 'small') {
-            this.price = 50;
-            this.calories = 20;
+            this.price = 19;
+            this.calories = 100;
         }
 
     }
     getStuffing() {
-        console.log(`Рубленый бифштекс из натуральной цельной говядины на карамелизованной булочке, заправленной сыром, ${this.stuffing} `)
+        console.log(`Рубленый бифштекс из натуральной цельной говядины на карамелизованной булочке, заправленной ${this.stuffing} `)
         // Узнать начинку гамбургера 
     }
     calculatePrice() {
@@ -71,5 +122,7 @@ class Cheeseburger extends Hamburger {
     }
     calculateCalories() {
         // Узнать калорийность 
+        let total_calories = this.calories
+        console.log(`цена ${this.size} Hamburger: ${total_calories}`);
     }
 }

@@ -1,17 +1,17 @@
 'use strict'
 
-class Hamburger {
-    constructor(size, stuffing) {
-        this.size = size;
-        this.stuffing = stuffing;
-        this.price = 0;
-        this.calories = 0;
+class Big_Mac extends Hamburger {
+    constructor(size, stuffing, price, calories) {
+        super(size, stuffing, price, calories);
 
         this.getSize();
         this.addTopping();
         this.calculatePrice();
         this.getStuffing();
+
     }
+
+
     addTopping() {
         // Добавить добавку 
 
@@ -32,6 +32,11 @@ class Hamburger {
                 this.calories = this.calories + 10;
             }
 
+            if (element == ' сыр') {
+                this.price = this.price + 10;
+                this.calories = this.calories + 5;
+            }
+
             if (element == ' лук') {
                 this.price = this.price + 5;
                 this.calories = this.calories + 5;
@@ -47,9 +52,11 @@ class Hamburger {
                 this.calories = this.calories + 5;
             }
         });
+
     }
+
     removeTopping(topping) {
-                stuffing.forEach(element => {
+        stuffing.forEach(element => {
 
             if (element !== ' кетчуп') {
                 this.price = this.price - 4,5;
@@ -64,6 +71,11 @@ class Hamburger {
             if (element !== '  мясная котлета') {
                 this.price = this.price - 10;
                 this.calories = this.calories - 10;
+            }
+
+            if (element !== ' сыр') {
+                this.price = this.price - 10;
+                this.calories = this.calories - 5;
             }
 
             if (element !== ' лук') {
@@ -81,7 +93,6 @@ class Hamburger {
                 this.calories = this.calories - 5;
             }
         });
-    
     }
     getToppings(topping) {
         // Получить список добавок 
@@ -105,14 +116,12 @@ class Hamburger {
     }
     calculatePrice() {
         // Узнать цену 
-
-        let total_price = this.price;
-        console.log(`цена ${this.size} Hamburger: ${total_price}`);
+        let total_price = this.price
+        console.log(`цена ${this.size} Cheeseburger: ${total_price} `)
 
     }
     calculateCalories() {
         // Узнать калорийность 
-
         let total_calories = this.calories
         console.log(`цена ${this.size} Hamburger: ${total_calories}`);
     }

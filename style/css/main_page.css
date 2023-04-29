@@ -36,6 +36,10 @@
 .products_catalog .product-item {
   width: 200px;
 }
+.products_catalog .product-item .img-item {
+  width: 240px;
+  height: 240px;
+}
 .products_catalog .card-pictures {
   width: 150px;
 }

@@ -2,11 +2,11 @@ $color_orange: #FF9401;
 
 .content {}
 
-.display_none{
+.display_none {
     display: none;
 }
 
-.display_block{
+.display_block {
     display: flex;
 }
 
@@ -19,7 +19,7 @@ $color_orange: #FF9401;
 }
 
 
-.product_item_detailed_block{
+.product_item_detailed_block {
     width: 500px;
     height: 770px;
     display: none;
@@ -35,8 +35,12 @@ $color_orange: #FF9401;
 
     .product-item {
         width: 200px;
-    }
 
+        .img-item {
+            width: 240px;
+            height: 240px;
+        }
+    }
 
     .card-pictures {
         width: 150px;

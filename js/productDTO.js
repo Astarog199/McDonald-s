@@ -14,9 +14,9 @@ class ProductList {
 
   #fetchGoods() {
     this.#goods = [
-      { id: 1, title: 'Hamburger', price: 20000 },
-      { id: 2, title: 'Cheeseburger', price: 1500 },
-      { id: 3, title: 'Big Mac', price: 5000 },
+      { id: 1, title: 'Hamburger', price: 20000, img: "style/pictures/catalog/Hamburger.png" },
+      { id: 2, title: 'Cheeseburger', price: 1500, img: "style/pictures/catalog/Cheeseburger.png" },
+      { id: 3, title: 'Big Mac', price: 5000, img: "style/pictures/catalog/Big Mac.png" },
     ];
   }
 
@@ -37,12 +37,12 @@ class ProductItem {
     this.title = product.title;
     this.price = product.price;
     this.id = product.id;
-    this.img = img;
+    this.img = product.img;
   }
 
   render() {
     return `<div class="product-item" data-id="${this.id}">
-              <img src="${this.img}" alt="Some img">
+              <img class="img-item" src="${this.img}" alt="Some img">
               <div class="desc">
                   <h3 class="title_product-item">${this.title}</h3>
                   <p>${this.price} \u20bd</p>
